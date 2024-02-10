@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Home";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import Login from "./Login";
+import Otp from "./Otp";
+import RouteDecider from "./components/RouteDecider";
+import DetailsForm from "./components/DetailsForm";
+import Addresses from "./components/Adresses";
+import AddProduct from "./components/AddProduct";
+import Carousel from "./library/Carousel";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/otp" element={<Otp />} />
+          <Route path="route-decider" element={<RouteDecider />} />
+          <Route path="/details-page" element={<DetailsForm />} />
+          <Route path="/addresses" element={<Addresses />} />
+          <Route path="/add-product" element={<AddProduct />} />
+        </Routes>
+      </BrowserRouter>
+      <Carousel items={[1, 2, 3, 4, 5]} />
+    </>
   );
 }
 

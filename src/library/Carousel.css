@@ -1,0 +1,36 @@
+.carousel-container{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 1rem;
+    border-radius: 1rem;
+    /* Hide the scrollbar */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-div{
+    height: 40vh;
+    min-width:20rem; 
+    /* max-width: 5rem !important; */
+    /* background-attachment: fixed; */
+    border-radius: 1.5rem;
+    background-size: 350px;
+    background-repeat: no-repeat;
+    margin: 0 0.2rem;
+}
+/* 
+.carousel-div-2{
+    height: 20vh;
+    min-width:100px;
+    max-width: 200px;
+    background-attachment: fixed;
+    border-radius: 1.5rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+} */
+
