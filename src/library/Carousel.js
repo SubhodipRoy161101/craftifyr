@@ -82,7 +82,7 @@ const Carousel = () => {
           // Update state with the index of the middle div
           setMiddleDivIndex(closestIndex);
         }
-      }, 10); // Adjust the throttle time as needed
+      }, 1.5); // Adjust the throttle time as needed
     };
 
     let throttleTimer = null;
