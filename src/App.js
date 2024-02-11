@@ -25,9 +25,9 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Carousel />
-      {/* <div>
+      <div>
         <img src="./assets/annimated final.svg"></img>
-      </div> */}
+      </div>
     </>
   );
 }
