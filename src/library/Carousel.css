@@ -1,6 +1,6 @@
-*{
-    transition: all 0.6s;
-}
+/* *{
+    transition: 10ms;
+} */
 
 .carousel-container{
     display: flex;

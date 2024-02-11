@@ -24,10 +24,10 @@ function App() {
           <Route path="/add-product" element={<AddProduct />} />
         </Routes>
       </BrowserRouter>
+      <Carousel />
       <div>
         <img src="./assets/annimated final.svg"></img>
       </div>
-      <Carousel />
     </>
   );
 }
