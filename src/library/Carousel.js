@@ -2,39 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import "./Carousel.css";
 
-const Carousel = () => {
-  const [items, setItems] = useState([
-    {
-      text: "Hello this is div one",
-      imageUrl:
-        "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      text: "This is a div",
-      imageUrl:
-        "https://images.pexels.com/photos/1386604/pexels-photo-1386604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      text: "This is a div two",
-      imageUrl:
-        "https://images.pexels.com/photos/919278/pexels-photo-919278.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      text: "Hello this is div last",
-      imageUrl:
-        "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      text: "Hello this is div last",
-      imageUrl:
-        "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-    {
-      text: "Hello this is div last",
-      imageUrl:
-        "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    },
-  ]);
+const Carousel = (props) => {
+  const [items, setItems] = useState(props.urls ? props.urls : []);
   const [containerPosition, setContainerPosition] = useState(0);
   const [middleDivIndex, setMiddleDivIndex] = useState(null);
 
@@ -142,10 +111,10 @@ const Carousel = () => {
           key={index}
           className={`carousel-div carousel-div-${index}`}
           style={{
-            backgroundImage: `url("${item.imageUrl}")`,
+            backgroundImage: `url("${item}")`,
           }}
         >
-          {item.text}
+          {/* {item.text} */}
         </div>
       ))}
     </div>

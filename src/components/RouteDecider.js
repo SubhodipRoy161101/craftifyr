@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const RouteDecider = () => {
   const naviagte = useNavigate();
   const checkIfDocumentExists = async (collectionName, documentId) => {
-    const docRef = doc(db, collectionName, documentId);
+    const docRef = doc(db, collectionName, documentId, "address", "default");
 
     try {
       const docSnapshot = await getDoc(docRef);

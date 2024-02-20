@@ -9,6 +9,8 @@ import DetailsForm from "./components/DetailsForm";
 import Addresses from "./components/Adresses";
 import AddProduct from "./components/AddProduct";
 import Carousel from "./library/Carousel";
+import AllProducts from "./components/AllProducts";
+import Logo from "./icon/react-svg-icon/Logo";
 
 function App() {
   return (
@@ -22,12 +24,13 @@ function App() {
           <Route path="/details-page" element={<DetailsForm />} />
           <Route path="/addresses" element={<Addresses />} />
           <Route path="/add-product" element={<AddProduct />} />
+          <Route path="/all-products" element={<AllProducts />} />
         </Routes>
       </BrowserRouter>
-      <Carousel />
-      <div>
+      <Logo />
+      {/* <div>
         <img src="./assets/annimated final.svg"></img>
-      </div>
+      </div> */}
     </>
   );
 }

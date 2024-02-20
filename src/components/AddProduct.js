@@ -6,12 +6,13 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 const AddProduct = () => {
   const initial_product_details = {
     productName: "",
-    sku: "",
+    dimension: "",
     units: "",
     discount: "",
     mrp: "",
     tax: "",
     hsn: "",
+    category: "",
   };
   const [productDetails, setProductDetails] = useState(initial_product_details);
 
@@ -73,7 +74,7 @@ const AddProduct = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="productName">SKU</label>
+              <label htmlFor="productName">Dimension</label>
               <input
                 type="text"
                 className="form-control"
@@ -134,6 +135,18 @@ const AddProduct = () => {
                 value={productDetails.hsn}
               />
             </div>
+
+            <div className="form-group">
+              <label htmlFor="productName">Category</label>
+              <input
+                type="text"
+                className="form-control"
+                name="category"
+                onChange={handleProductDetailsChange}
+                value={productDetails.category}
+              />
+            </div>
+
             <div className="form-group">
               <label htmlFor="image">Image</label>
               <input
